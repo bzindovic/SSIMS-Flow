@@ -1,11 +1,11 @@
-#include "filtering.h"
+#include "filtering.hpp"
 #include <math.h>
 #include <vector>
 
-void intensity_capping(byte* array, size_t array_size, double n_std) {
+void intensity_capping(Byte* array, size_t array_size, double n_std) {
     std::vector<unsigned int> bytes_map(256, 0);
-    byte pixel = 0;
-    byte pixel_min = 255;
+    Byte pixel = 0;
+    Byte pixel_min = 255;
 
     size_t sum = 0;
     unsigned int pixel_median = 0;
@@ -26,7 +26,7 @@ void intensity_capping(byte* array, size_t array_size, double n_std) {
     }
 
     pixel_min_as_double = pixel_min;
-    byte pixel_mean = sum / array_size + 0.5;
+    Byte pixel_mean = sum / array_size + 0.5;
 
     // Finding median through pixel value histogram
     sum = 0;
@@ -44,7 +44,7 @@ void intensity_capping(byte* array, size_t array_size, double n_std) {
 
     double stdev = sqrt(sum / array_size);
     double cap = pixel_median - n_std * stdev + 0.5;
-    byte cap_byte = cap;
+    Byte cap_byte = cap;
 
     // Perform pixel intensity capping
     for (i = 0; i < array_size; i++) {
