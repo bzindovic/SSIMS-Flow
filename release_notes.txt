@@ -1,3 +1,11 @@
+SSIMS-Flow v0.7.0.1
+
+Minor:
+- Fixed broken profile selection when no initial profile exists for a project.
+- Fixed a broken power-law fit optional parameter optimization.
+
+===============================================================================
+
 SSIMS-Flow v0.7.0.0
 
 Major:

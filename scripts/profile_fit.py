@@ -69,12 +69,12 @@ def main(cfg, ys, mags):
 		Bratio = 0.50
 
 		fit_thr = cfg_get(cfg, section, 'FitThreshold', float, default=0.67)
-		beta_min = cfg_get(cfg, section, 'BetaMin', float, default=0.15)
-		beta_max = cfg_get(cfg, section, 'BetaMax', float, default=0.50)
-		Umax_min = cfg_get(cfg, section, 'UMaxMin', float, default=0.0)
-		Umax_max = cfg_get(cfg, section, 'UMaxMax', float, default=10.0)
-		Bratio_min = cfg_get(cfg, section, 'BratioMin', float, default=0.1)
-		Bratio_max = cfg_get(cfg, section, 'BratioMax', float, default=0.9)
+		beta_min = cfg_get(cfg, section, 'BetaMin', float, default=0.15)*.999
+		beta_max = cfg_get(cfg, section, 'BetaMax', float, default=0.50)*1.001
+		Umax_min = cfg_get(cfg, section, 'UMaxMin', float, default=0.0)*.999
+		Umax_max = cfg_get(cfg, section, 'UMaxMax', float, default=10.0)*1.001
+		Bratio_min = cfg_get(cfg, section, 'BratioMin', float, default=0.1)*.999
+		Bratio_max = cfg_get(cfg, section, 'BratioMax', float, default=0.9)*1.001
 
 		bounds = [[beta_min, beta_max], [Umax_min, Umax_max], [Bratio_min, Bratio_max]]
 

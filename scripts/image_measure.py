@@ -117,11 +117,19 @@ def get_measurement(event):
 			dy = (ys[1] - ys[0]) / 100
 
 			if get_profile:
+				print("Riverbank profile selection.")
 				riverbank_start = [xs[0], ys[0]]
 				riverbank_end = [xs[1], ys[1]]
 
-				riverbank_start_ax.set_offsets(riverbank_start)
-				riverbank_end_ax.set_offsets(riverbank_end)
+				if 'riverbank_start_ax' not in locals():
+					riverbank_start_ax = ax.scatter(xs[0], ys[0], s=200, marker='x', c='b')
+					riverbank_end_ax = ax.scatter(xs[1], ys[1], s=200, marker='x', c='b')
+
+					sl_ax_riverbank_start.set_val(0)
+					sl_ax_riverbank_end.set_val(100)
+				else:
+					riverbank_start_ax.set_offsets(riverbank_start)
+					riverbank_end_ax.set_offsets(riverbank_end)
 
 			distance_box.set_text(xy2str(points, d))
 			distance_box.set_x((xs[0]+xs[1])/2)
