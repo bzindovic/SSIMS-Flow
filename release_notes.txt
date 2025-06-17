@@ -1,3 +1,15 @@
+SSIMS-Flow v0.7.0.2
+
+Minor:
+- Fixed a bug with camera distortion removal when extracting frames. Huge thanks
+to Strahinja Nikolic for finding the bug and providing a fix!
+- If the video is not unpacked fully (all available frames), this setting will
+now be remembered in the Unpack video form.
+- Selecting the ROI in the Unpack video form will no longer reset the start and 
+end values of the time crop.
+
+===============================================================================
+
 SSIMS-Flow v0.7.0.1
 
 Minor:

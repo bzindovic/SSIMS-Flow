@@ -26,7 +26,7 @@ try:
 	from utilities import cfg_get, exit_message, present_exception_and_exit
 
 except Exception as ex:
-	present_exception_and_exit('Import failed! See traceback below:')
+	present_exception_and_exit('Import failed! For more information see traceback below. Please report this issue to the author:')
 
 
 MAX_FRAMES_DEFAULT = 60**3  # 60 minutes at 60fps

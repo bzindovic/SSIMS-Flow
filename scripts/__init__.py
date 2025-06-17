@@ -7,14 +7,14 @@ try:
 	from argparse import ArgumentParser
 except Exception as ex:
 	from utilities import present_exception_and_exit
-	present_exception_and_exit('Import failed! See traceback below:')
+	present_exception_and_exit('Import failed! For more information see traceback below. Please report this issue to the author:')
 
 
 __package_name__ = 'SSIMS-Flow: Image velocimetry workbench'
 __description__ = 'Workbench for obtaining open-channel flow rate from videos.'
-__version__ = '0.7.0.1'
+__version__ = '0.7.0.2'
 __status__ = 'beta'
-__date_deployed__ = '2025-05-28'
+__date_deployed__ = '2025-06-17'
 
 __author__ = 'Robert Ljubicic @ Faculty of Civil Engineering, University of Belgrade'
 __author_email__ = 'rljubicic@grf.bg.ac.rs, ljubicicrobert@gmail.com'

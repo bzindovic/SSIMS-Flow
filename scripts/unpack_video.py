@@ -25,7 +25,7 @@ try:
 	from utilities import fresh_folder, cfg_get, exit_message, present_exception_and_exit
 
 except Exception as ex:
-	present_exception_and_exit('Import failed! See traceback below:')
+	present_exception_and_exit('Import failed! For more information see traceback below. Please report this issue to the author:')
 
 
 MAX_FRAMES_DEFAULT = 60**3
@@ -279,7 +279,7 @@ if __name__ == '__main__':
 
 		if remove_distortion:
 			camera_parameters = get_camera_parameters(f'{project_folder}/camera_parameters.cpf')
-			camera_matrix, distortion = camera_parameters[0]
+			camera_matrix, distortion = camera_parameters
 		else:
 			camera_matrix, distortion = None, None
 

@@ -43,7 +43,7 @@ def exit_message():
 	exit()
 
 
-def present_exception_and_exit(message='An exception has occurred! See traceback below:'):
+def present_exception_and_exit(message='An exception has occurred! For more information see traceback below. Please report this issue to the author:'):
 	print()
 	tag_print('exception', message)
 	print()

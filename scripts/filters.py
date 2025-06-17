@@ -36,7 +36,7 @@ try:
 	cpp_intensity_capping = dll_loader.get_function('void', 'intensity_capping', ['byte*', 'size_t', 'double'])
 
 except Exception as ex:
-	present_exception_and_exit('Import failed! See traceback below:')
+	present_exception_and_exit('Import failed! For more information see traceback below. Please report this issue to the author:')
 	
 
 colorspaces_list = ['rgb', 'hsv', 'lab', 'grayscale', 'ycrcb']

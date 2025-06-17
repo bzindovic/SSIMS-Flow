@@ -27,7 +27,7 @@ try:
 	import shutil
 
 except Exception as ex:
-	present_exception_and_exit('Import failed! See traceback below:')
+	present_exception_and_exit('Import failed! For more information see traceback below. Please report this issue to the author:')
 
 
 if __name__ == '__main__':
@@ -73,7 +73,4 @@ if __name__ == '__main__':
 		cv2.imwrite(save_path_filtered, img_bgr)
 
 	except Exception as ex:
-		print('[EXCEPTION] An exception has occurred! See traceback below: \n')
-		print(format_exc())
-		print('[END_TRACEBACK]')
-		exit_message()
+		present_exception_and_exit()

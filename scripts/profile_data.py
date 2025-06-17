@@ -29,7 +29,7 @@ try:
 	from profile_fit import main as profile_fit_main
 
 except Exception as ex:
-	present_exception_and_exit('Import failed! See traceback below:')
+	present_exception_and_exit('Import failed! For more information see traceback below. Please report this issue to the author:')
 
 
 fmt_vel = '%.4f'
