@@ -365,6 +365,8 @@ I wish to express my gratitude to the following people (in no particular order):
 
 [Dr Silvano Fortunato Dal Sasso](https://www.researchgate.net/profile/Silvano_Fortunato_Dal_Sasso) and [Dr Alonso Pizarro](https://www.researchgate.net/profile/Alonso_Pizarro) for providing the original source code for the SDI analysis, and helping me with implementing and testing the SDI code in SSIMS-Flow.
 
+Strahinja Nikolić for finding several bugs and providing fixes.
+
 
 ## References
 
